@@ -8,6 +8,12 @@ learn mojo
 - ✅️ 包含大量示例代码
 - ✅️ 新手建议使用 pycharm 打开项目，方便使用 jupyter notebook
 
+> mojo 官方 playground:
+
+- ✅️ 在 playground 中测试， mojo 当前不支持的 python 语法（未来可能支持）
+
+<img width="500"  src="docs/img/img.png"  alt="mojo"/>
+
 ## Development Environment
 
 - ✅️ [go-task](https://taskfile.dev/) + [Taskfile.yml](Taskfile.yml) : 脚本工具，替代 Makefile
