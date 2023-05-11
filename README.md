@@ -14,6 +14,12 @@ learn mojo
 
 <img width="500"  src="docs/img/img.png"  alt="mojo"/>
 
+- ✅️ Mojo 直接导入 Python 第三方 lib 的能力. 🔥️
+    - 以 BeautifulSoup4 解析+格式化 HTML 为示例, Mojo 🔥️ YYDS.
+
+<img width="500"  src="docs/img/img2.png"  alt="mojo"/>
+
+
 ## Development Environment
 
 - ✅️ [go-task](https://taskfile.dev/) + [Taskfile.yml](Taskfile.yml) : 脚本工具，替代 Makefile
