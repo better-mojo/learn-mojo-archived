@@ -10,7 +10,7 @@ learn mojo
 
 ## Development Environment
 
-- ✅️ [go-task](https://taskfile.dev/) : 脚本工具，替代 Makefile
+- ✅️ [go-task](https://taskfile.dev/) + [Taskfile.yml](Taskfile.yml) : 脚本工具，替代 Makefile
 - ✅️ python3.10
 - ✅️ poetry
 - ✅️ jupyter notebook
