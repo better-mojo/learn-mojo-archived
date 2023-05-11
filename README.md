@@ -10,11 +10,20 @@ learn mojo
 
 ## Development Environment
 
+- ✅️ [go-task](https://taskfile.dev/) : 脚本工具，替代 Makefile
 - ✅️ python3.10
 - ✅️ poetry
 - ✅️ jupyter notebook
 
 ```bash
+
+# 安装 go-task: https://taskfile.dev/installation/
+# install: (only for mac)
+brew install go-task
+# or: (only for windows)
+choco install go-task
+
+
 # 安装 pyenv + python3.10 + 自动配置 venv
 task setup
 
