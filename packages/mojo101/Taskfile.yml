@@ -1,6 +1,5 @@
 version: "3"
 
-
 #
 # global vars: https://taskfile.dev/#/usage?id=variables
 #
@@ -11,9 +10,7 @@ vars:
 env:
   ENV1: testing
 
-
 ################################################################################################
-
 
 tasks:
   run:
@@ -22,9 +19,41 @@ tasks:
         python3 run.py
     dir: src/mojo101/
 
+  run2:
+    cmds:
+      - mojo run try_trait.mojo
+    dir: src/mojo101/
+
+  build:
+    cmds:
+      - mkdir build/
+      - mojo build src/mojo101/try_trait.mojo -o build/main
+    ignore_error: true
+
+  b:
+    cmds:
+      - task: build
+
+  br:
+    cmds:
+      - task: build
+      - ./build/main
+
+  clean:
+    cmds:
+      - rm -rf build
+      - rm -rf dist
+      - mkdir build
+      - mkdir dist
+    ignore_error: true
+
+
+
+  help:
+    cmds:
+      - mojo build --help
 
   ################################################################################################
-
 
   install:
     cmds:
