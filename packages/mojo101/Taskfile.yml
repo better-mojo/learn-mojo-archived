@@ -19,6 +19,14 @@ tasks:
         python3 run.py
     dir: src/mojo101/
 
+  e:
+    cmds:
+      - modular host-info
+      - modular config-list
+      - modular --version
+      - mojo --version
+      - echo $MODULAR_HOME
+
   r:
     cmds:
       - |
@@ -34,6 +42,7 @@ tasks:
       - mojo src/mojo101/try_02e.mojo
       - mojo src/mojo101/try_02f.mojo
       - mojo src/mojo101/try_02g.mojo
+      - mojo src/mojo101/try_02h_use_py.mojo -I .
 
   r1:
     cmds:
