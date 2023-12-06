@@ -1,5 +1,6 @@
 #
-# todo x: 定义一个结构体
+# struct: 定义一个结构体
+#   - ref: https://docs.modular.com/mojo/manual/basics.html#structs
 #
 struct MyPair:
     var first: Int  # struct 字段类型, 需要显式声明类型

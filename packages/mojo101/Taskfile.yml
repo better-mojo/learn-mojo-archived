@@ -31,6 +31,7 @@ tasks:
       - mojo src/mojo101/try_02b.mojo
       - mojo src/mojo101/try_02c.mojo
       - mojo src/mojo101/try_02d.mojo
+      - mojo src/mojo101/try_02e.mojo
 
   r1:
     cmds:
