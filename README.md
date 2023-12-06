@@ -12,22 +12,26 @@ learn mojo
 - ✅ 性能: C Level.(同 Rust/Zig/C)
 - ✅ 易用性: Python Level.(新增语法设计, 高度符合 Python 直觉)
 
-## Mojo 101
+## [Mojo 101](./packages/mojo101/)
 
-- ✅️ Mojo 学习教程 [packages/mojo101](packages/mojo101)
+- ✅️ [Mojo 入门学习教程](packages/mojo101)
 - ✅️ 包含大量示例代码
-- ✅️ 新手建议使用 pycharm 打开项目，方便使用 jupyter notebook
+- ✅️ 新手建议使用 `pycharm` 打开项目，方便使用 `jupyter notebook`
 
-### Mojo 官方文档代码:
+### [Mojo 官方文档代码](./packages/mojo-manual/):
 
-- ✅️ [mojo docs](https://docs.modular.com/mojo/manual/basics.html)
+- 🔥 官方文档: [mojo docs](https://docs.modular.com/mojo/manual/basics.html)
 
-| 代码文件                                                    | 说明        | 备注 |
-| ----------------------------------------------------------- | ----------- | ---- |
-| ✅ [01. 开始](packages/mojo101/src/mojo101/try_01.mojo)     | hello world | 🌟   |
-| ✅ [02. 基础](packages/mojo101/src/mojo101/try_02.mojo)     | 代码        | 🌟   |
-| ✅ [02b. 函数](packages/mojo101/src/mojo101/try_02b.mojo)   | 函数定义    | 🌟   |
-| ✅ [02c. 结构体](packages/mojo101/src/mojo101/try_02c.mojo) | struct 定义 | 🌟🌟 |
+| 代码文件                                                            | 说明        | 备注 |
+| ------------------------------------------------------------------- | ----------- | ---- |
+| ✅ [01. 开始](packages/mojo-manual/src/mojo_manual/try_01.mojo)     | hello world | 🌟   |
+| ✅ [02. 基础](packages/mojo-manual/src/mojo_manual/try_02.mojo)     | 代码        | 🌟   |
+| ✅ [02b. 函数](packages/mojo-manual/src/mojo_manual/try_02b.mojo)   | 函数定义    | 🌟   |
+| ✅ [02c. 结构体](packages/mojo-manual/src/mojo_manual/try_02c.mojo) | struct 定义 | 🌟🌟 |
+
+### [Mojo 标准库](./packages/mojo-std/):
+
+- 🔥 标准库学习 & 代码.
 
 ### Mojo 官方 Examples:
 
