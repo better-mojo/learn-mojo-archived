@@ -16,7 +16,7 @@ def check_py(pkgs: Tuple):
     # todo x: 特别注意 mojo run 的位置, 决定真正的相对路径!!!
     #
     # Python.add_to_path(".")  # todo x: 注意执行的相对路径!!!
-    Python.add_to_path("./src/mojo101")  # todo x: 注意执行的相对路径!!!
+    Python.add_to_path("./src/mojo_manual")  # todo x: 注意执行的相对路径!!!
     check = Python.import_module("check_mod")
 
     check.installs_if_missing(pkgs)
