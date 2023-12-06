@@ -33,6 +33,12 @@ tasks:
         mojo try_01.mojo
     dir: src/mojo101/
 
+  r3:
+    cmds:
+      - mojo src/mojo101/try_03_fn.mojo
+      - mojo src/mojo101/try_03b.mojo
+      - mojo src/mojo101/try_03c.mojo
+
   r2:
     cmds:
       - mojo src/mojo101/try_02.mojo

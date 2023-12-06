@@ -29,6 +29,10 @@ learn mojo
 | ✅ [02b. 函数](packages/mojo101/src/mojo101/try_02b.mojo)   | 函数定义    | 🌟   |
 | ✅ [02c. 结构体](packages/mojo101/src/mojo101/try_02c.mojo) | struct 定义 | 🌟🌟 |
 
+### Mojo 官方 Examples:
+
+- 🔥 [mojo examples](https://github.com/modularml/mojo/tree/main/examples)
+
 ### Mojo 官方 playground:
 
 - ✅️ 在 playground 中测试， mojo 当前不支持的 python 语法（未来可能支持）
