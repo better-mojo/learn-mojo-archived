@@ -33,9 +33,27 @@ tasks:
         mojo try_01.mojo
     dir: src/mojo101/
 
+  # run all:
+  ra:
+    cmds:
+      - task: r1
+      - task: r2
+      - task: r3
+      - task: r4
+      - task: r5
+      - task: r6
+
+  r6:
+    cmds:
+      - mojo src/mojo101/try_06_traits.mojo
+
+  r5:
+    cmds:
+      - mojo src/mojo101/try_05_structs.mojo
+
   r4:
     cmds:
-      - mojo src/mojo101/try_04.mojo
+      - mojo src/mojo101/try_04_variables.mojo
       - mojo src/mojo101/try_04b.mojo
       - mojo src/mojo101/try_04c.mojo
 
