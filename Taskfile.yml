@@ -11,6 +11,11 @@ includes:
     dir: packages/mojo101/
     optional: true #
 
+  try:
+    taskfile: packages/try/
+    dir: packages/try/
+    optional: true #
+
 
 ################################################################################################
 
@@ -53,6 +58,12 @@ tasks:
       - poetry --version
       - poetry config virtualenvs.in-project true
       - poetry config --list
+
+  install:m1:
+    cmds:
+      - modular --help
+      - modular upgrade mojo
+      - mojo --version
 
   init:
     cmds:
