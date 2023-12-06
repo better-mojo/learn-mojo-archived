@@ -7,6 +7,8 @@
 - ✅️ python3.10
 - ✅️ poetry
 - ✅️ jupyter notebook
+- ✅ mojo 0.6+: [install mojo](https://docs.modular.com/mojo/manual/get-started/)
+
 
 ```bash
 

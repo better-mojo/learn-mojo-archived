@@ -19,6 +19,23 @@ tasks:
         python3 run.py
     dir: src/mojo101/
 
+  r:
+    cmds:
+      - |
+        mojo try_01.mojo
+    dir: src/mojo101/
+
+  r1:
+    cmds:
+      - mojo src/mojo101/try_01.mojo
+
+  br1:
+    cmds:
+      - mkdir build/
+      - mojo build src/mojo101/try_01.mojo -o build/main
+      - ./build/main
+    ignore_error: true
+
   run2:
     cmds:
       - mojo run try_trait.mojo
@@ -46,8 +63,6 @@ tasks:
       - mkdir build
       - mkdir dist
     ignore_error: true
-
-
 
   help:
     cmds:
