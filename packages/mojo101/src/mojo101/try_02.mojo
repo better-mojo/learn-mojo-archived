@@ -1,6 +1,9 @@
-#
-# ref: https://docs.modular.com/mojo/manual/basics.html
-#
+"""
+函数定义:
+    - fn: 定义 mojo 风格的函数
+    - def: 定义 Python 风格的函数
+    - ref: https://docs.modular.com/mojo/manual/basics.html
+"""
 
 
 def greet(name):

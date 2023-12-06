@@ -1,7 +1,8 @@
-#
-# Parameterization: compile-time parameters, 编译期参数
-#   - ref: https://docs.modular.com/mojo/manual/basics.html#parameterization
-#
+"""
+Parameterization: compile-time parameters, 编译期参数
+    - ref: https://docs.modular.com/mojo/manual/basics.html#parameterization
+
+"""
 
 
 fn repeat[count: Int](msg: String):

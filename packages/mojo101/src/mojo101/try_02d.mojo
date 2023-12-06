@@ -1,11 +1,13 @@
-#
-# trait 接口声明: 类似 rust trait, go interface 等
-#   - ref: https://docs.modular.com/mojo/manual/basics.html#traits
-#   - 包含:
-#       - 接口 trait 定义/声明(define)
-#       - 接口实现(implement)
-#       - 接口调用(call): 配合泛型 generic functions, 支持灵活调用.
-#
+"""
+trait 接口声明: 类似 rust trait, go interface 等
+   - ref: https://docs.modular.com/mojo/manual/basics.html#traits
+   - 包含:
+       - 接口 trait 定义/声明(define)
+       - 接口实现(implement)
+       - 接口调用(call): 配合泛型 generic functions, 支持灵活调用.
+"""
+
+
 trait SomeTrait:
     #
     # todo x: 函数接口声明格式, 需要 ... 结尾, 类似 python def + pass.

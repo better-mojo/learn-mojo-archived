@@ -1,6 +1,8 @@
-#
-# ref: https://docs.modular.com/mojo/manual/get-started/hello-world.html
-#
+"""
+示例: 
+    - ref: https://docs.modular.com/mojo/manual/get-started/hello-world.html
+
+"""
 
 
 # python function definition

@@ -1,3 +1,9 @@
+"""
+def 定义 Python 风格的函数
+
+"""
+
+
 def do_math(x):
     var y = x + x  # y is mutable
     y = y * y
