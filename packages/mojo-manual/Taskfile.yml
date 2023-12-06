@@ -9,6 +9,7 @@ vars:
 # global env:
 env:
   ENV1: testing
+  SRC: "src/mojo_manual"
 
 ################################################################################################
 
@@ -17,7 +18,7 @@ tasks:
     cmds:
       - |
         python3 run.py
-    dir: src/mojo101/
+    dir: ${SRC}/
 
   e:
     cmds:
@@ -31,27 +32,59 @@ tasks:
     cmds:
       - |
         mojo try_01.mojo
-    dir: src/mojo101/
+    dir: ${SRC}/
 
-  run2:
+  # run all:
+  ra:
     cmds:
-      - mojo run try_trait.mojo
-    dir: src/mojo101/
+      - task: r1
+      - task: r2
+      - task: r3
+      - task: r4
+      - task: r5
+      - task: r6
 
-  build:
+  r6:
+    cmds:
+      - mojo ${SRC}/try_06_traits.mojo
+
+  r5:
+    cmds:
+      - mojo ${SRC}/try_05_structs.mojo
+
+  r4:
+    cmds:
+      - mojo ${SRC}/try_04_variables.mojo
+      - mojo ${SRC}/try_04b.mojo
+      - mojo ${SRC}/try_04c.mojo
+
+  r3:
+    cmds:
+      - mojo ${SRC}/try_03_fn.mojo
+      - mojo ${SRC}/try_03b.mojo
+      - mojo ${SRC}/try_03c.mojo
+
+  r2:
+    cmds:
+      - mojo ${SRC}/try_02.mojo
+      - mojo ${SRC}/try_02b.mojo
+      - mojo ${SRC}/try_02c.mojo
+      - mojo ${SRC}/try_02d.mojo
+      - mojo ${SRC}/try_02e.mojo
+      - mojo ${SRC}/try_02f.mojo
+      - mojo ${SRC}/try_02g.mojo
+      - mojo ${SRC}/try_02h_use_py.mojo -I .
+
+  r1:
+    cmds:
+      - mojo ${SRC}/try_01.mojo
+
+  br1:
     cmds:
       - mkdir build/
-      - mojo build src/mojo101/try_trait.mojo -o build/main
-    ignore_error: true
-
-  b:
-    cmds:
-      - task: build
-
-  br:
-    cmds:
-      - task: build
+      - mojo build ${SRC}/try_01.mojo -o build/main
       - ./build/main
+    ignore_error: true
 
   clean:
     cmds:

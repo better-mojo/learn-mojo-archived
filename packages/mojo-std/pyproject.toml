@@ -4,10 +4,12 @@ version = "0.1.0"
 description = ""
 authors = ["Henry.Huang <hhglory@outlook.com>"]
 readme = "README.md"
-packages = [{include = "mojo_std", from = "src"}]
+packages = [{ include = "mojo_std", from = "src" }]
 
 [tool.poetry.dependencies]
 python = "^3.10"
+jupyterlab = "^3.6.3"
+notebook = "^6.5.4"
 
 
 [build-system]
