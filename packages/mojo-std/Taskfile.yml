@@ -5,11 +5,12 @@ version: "3"
 #
 vars:
   VAR1: "some-var"
+  SRC: "src/mojo_std"
 
 # global env:
 env:
   ENV1: testing
-  SRC: "src/mojo_manual"
+  SRC: "src/mojo_std"
 
 ################################################################################################
 
@@ -18,7 +19,6 @@ tasks:
     cmds:
       - |
         python3 run.py
-    dir: ${SRC}/
 
   e:
     cmds:
@@ -31,8 +31,7 @@ tasks:
   r:
     cmds:
       - |
-        mojo try_01.mojo
-    dir: ${SRC}/
+        mojo {{ .SRC }}/try_01_algo.mojo
 
   # run all:
   ra:
@@ -46,43 +45,47 @@ tasks:
 
   r6:
     cmds:
-      - mojo ${SRC}/try_06_traits.mojo
+      - mojo {{ .SRC }}/try_06_traits.mojo
 
   r5:
     cmds:
-      - mojo ${SRC}/try_05_structs.mojo
+      - mojo {{ .SRC }}/try_05_structs.mojo
 
   r4:
     cmds:
-      - mojo ${SRC}/try_04_variables.mojo
-      - mojo ${SRC}/try_04b.mojo
-      - mojo ${SRC}/try_04c.mojo
+      - mojo {{ .SRC }}/try_04_variables.mojo
+      - mojo {{ .SRC }}/try_04b.mojo
+      - mojo {{ .SRC }}/try_04c.mojo
 
   r3:
     cmds:
-      - mojo ${SRC}/try_03_fn.mojo
-      - mojo ${SRC}/try_03b.mojo
-      - mojo ${SRC}/try_03c.mojo
+      - mojo {{ .SRC }}/try_03_fn.mojo
+      - mojo {{ .SRC }}/try_03b.mojo
+      - mojo {{ .SRC }}/try_03c.mojo
 
   r2:
     cmds:
-      - mojo ${SRC}/try_02.mojo
-      - mojo ${SRC}/try_02b.mojo
-      - mojo ${SRC}/try_02c.mojo
-      - mojo ${SRC}/try_02d.mojo
-      - mojo ${SRC}/try_02e.mojo
-      - mojo ${SRC}/try_02f.mojo
-      - mojo ${SRC}/try_02g.mojo
-      - mojo ${SRC}/try_02h_use_py.mojo -I .
+      - mojo {{ .SRC }}/try_02.mojo
+      - mojo {{ .SRC }}/try_02b.mojo
+      - mojo {{ .SRC }}/try_02c.mojo
+      - mojo {{ .SRC }}/try_02d.mojo
+      - mojo {{ .SRC }}/try_02e.mojo
+      - mojo {{ .SRC }}/try_02f.mojo
+      - mojo {{ .SRC }}/try_02g.mojo
+      - mojo {{ .SRC }}/try_02h_use_py.mojo -I .
 
   r1:
     cmds:
-      - mojo ${SRC}/try_01.mojo
+      - echo {{ .SRC }}
+      - echo ${SRC}
+      - mojo {{ .SRC }}/try_01_algo.mojo
+      - mojo {{ .SRC }}/try_01b.mojo
+      - mojo {{ .SRC }}/try_01c.mojo
 
   br1:
     cmds:
       - mkdir build/
-      - mojo build ${SRC}/try_01.mojo -o build/main
+      - mojo build {{ .SRC }}/try_01.mojo -o build/main
       - ./build/main
     ignore_error: true
 
