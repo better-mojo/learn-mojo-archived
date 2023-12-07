@@ -1,0 +1,92 @@
+version: "3"
+
+#
+# global vars: https://taskfile.dev/#/usage?id=variables
+#
+vars:
+  VAR1: "some-var"
+  SRC: "src/mojo_ffi"
+
+# global env:
+env:
+  ENV1: testing
+  SRC: "src/mojo_ffi"
+
+################################################################################################
+
+tasks:
+  e:
+    cmds:
+      - modular host-info
+      - modular config-list
+      - modular --version
+      - mojo --version
+      - echo $MODULAR_HOME
+
+  r:
+    aliases: [run]
+    cmds:
+      - |
+        mojo {{ .SRC }}/try_01_algo.mojo
+
+  r1:
+    aliases: [run1]
+    cmds:
+      - echo {{ .SRC }}
+      - echo ${SRC}
+      - mojo {{ .SRC }}/try_c.mojo
+
+  br1:
+    aliases: [build:run1]
+    cmds:
+      - mkdir build/
+      - mojo build {{ .SRC }}/try_01.mojo -o build/main
+      - ./build/main
+    ignore_error: true
+
+  clean:
+    aliases: [c]
+    cmds:
+      - rm -rf build
+      - rm -rf dist
+      - mkdir build
+      - mkdir dist
+    ignore_error: true
+
+  help:
+    aliases: [h]
+    cmds:
+      - mojo build --help
+
+  ################################################################################################
+
+  install:
+    cmds:
+      - poetry install
+
+  add:
+    cmds:
+      - poetry add click
+      - poetry add jupyterlab notebook
+
+  add:dev:
+    cmds:
+      - poetry add ${PACKAGE} --dev
+
+  update:
+    aliases: [up]
+    cmds:
+      - poetry update
+
+  config:
+    cmds:
+      - poetry config virtualenvs.in-project false --local
+      - poetry config virtualenvs.create false --local
+
+  env:
+    cmds:
+      - poetry
+      - poetry env list
+      - poetry cache list
+      - poetry debug info
+      - poetry debug resolve
