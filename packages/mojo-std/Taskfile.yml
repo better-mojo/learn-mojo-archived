@@ -15,11 +15,6 @@ env:
 ################################################################################################
 
 tasks:
-  run:
-    cmds:
-      - |
-        python3 run.py
-
   e:
     cmds:
       - modular host-info
@@ -29,12 +24,14 @@ tasks:
       - echo $MODULAR_HOME
 
   r:
+    aliases: [run]
     cmds:
       - |
         mojo {{ .SRC }}/try_01_algo.mojo
 
   # run all:
   ra:
+    aliases: [run:all]
     cmds:
       - task: r1
       - task: r2
@@ -42,28 +39,34 @@ tasks:
       - task: r4
       - task: r5
       - task: r6
+    ignore_errors: true
 
   r6:
+    aliases: [run6]
     cmds:
       - mojo {{ .SRC }}/try_06_traits.mojo
 
   r5:
+    aliases: [run5]
     cmds:
       - mojo {{ .SRC }}/try_05_structs.mojo
 
   r4:
+    aliases: [run4]
     cmds:
       - mojo {{ .SRC }}/try_04_variables.mojo
       - mojo {{ .SRC }}/try_04b.mojo
       - mojo {{ .SRC }}/try_04c.mojo
 
   r3:
+    aliases: [run3]
     cmds:
       - mojo {{ .SRC }}/try_03_fn.mojo
       - mojo {{ .SRC }}/try_03b.mojo
       - mojo {{ .SRC }}/try_03c.mojo
 
   r2:
+    aliases: [run2]
     cmds:
       - mojo {{ .SRC }}/try_02.mojo
       - mojo {{ .SRC }}/try_02b.mojo
@@ -75,6 +78,7 @@ tasks:
       - mojo {{ .SRC }}/try_02h_use_py.mojo -I .
 
   r1:
+    aliases: [run1]
     cmds:
       - echo {{ .SRC }}
       - echo ${SRC}
@@ -83,6 +87,7 @@ tasks:
       - mojo {{ .SRC }}/try_01c.mojo
 
   br1:
+    aliases: [build:run1]
     cmds:
       - mkdir build/
       - mojo build {{ .SRC }}/try_01.mojo -o build/main
@@ -90,6 +95,7 @@ tasks:
     ignore_error: true
 
   clean:
+    aliases: [c]
     cmds:
       - rm -rf build
       - rm -rf dist
@@ -98,6 +104,7 @@ tasks:
     ignore_error: true
 
   help:
+    aliases: [h]
     cmds:
       - mojo build --help
 
@@ -117,6 +124,7 @@ tasks:
       - poetry add ${PACKAGE} --dev
 
   update:
+    aliases: [up]
     cmds:
       - poetry update
 

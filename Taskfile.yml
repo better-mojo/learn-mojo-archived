@@ -1,27 +1,31 @@
 version: "3"
 
-includes:
-  std:
-    taskfile: ~/.local/task/better-sre/config/Taskfile.yml
-    dir: ~/.local/task/better-sre/config # global path
-    optional: true #
+output: prefixed # = [interleaved, group, prefixed] # ref:
 
+#
+# ref: https://taskfile.dev/zh-Hans/usage/
+#
+includes:
   mojo:
+    aliases: [m]
     taskfile: packages/mojo101/
     dir: packages/mojo101/
     optional: true #
 
   docs:
+    aliases: [d]
     taskfile: packages/mojo-manual/
     dir: packages/mojo-manual/
     optional: true #
 
   std:
+    aliases: [s]
     taskfile: packages/mojo-std/
     dir: packages/mojo-std/
     optional: true #
 
   try:
+    aliases: [t]
     taskfile: packages/try/
     dir: packages/try/
     optional: true #
@@ -45,6 +49,11 @@ dotenv:
 ################################################################################################
 
 tasks:
+  all:
+    aliases: [a]
+    cmds:
+      - task --list-all
+
   setup:
     cmds:
       - curl -L https://github.com/pyenv/pyenv-installer/raw/master/bin/pyenv-installer | bash
@@ -81,6 +90,15 @@ tasks:
 
   ##################################################################################################
 
+  #
+  # cli args:
+  #   - usage: task n -- try/try-pkg
+  #
+  n:
+    cmds:
+      - poetry new {{.CLI_ARGS}} --src
+    dir: packages/
+
   new:
     cmds:
       - poetry new ${NEW_PROJECT_NAME} --src
@@ -90,6 +108,12 @@ tasks:
     dir: packages
     cmds:
       - cookiecutter gh:jacebrowning/template-python -f
+
+  info:
+    cmds:
+      - echo {{now | date "2006-01-02"}}
+      - echo '{{OS}} {{ARCH}}'
+      # - task --list-all
 
   ##################################################################################################
 
