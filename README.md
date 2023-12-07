@@ -2,6 +2,17 @@
 
 learn mojo
 
+> Mojo Version:
+
+- [Mojo Install](https://developer.modular.com/download)
+- 本 repo 代码基于 Mojo 版本:
+
+```ruby
+❯ mojo -v
+mojo 0.6.0 (d55c0025) # 2023-12
+
+```
+
 ## Mojo 是什么?
 
 - 🔥 [Mojo](https://docs.modular.com/mojo/why-mojo.html) = Python++. (类似: `C vs C++`, `JS vs TS`, `ObjectiveC vs Swift`)
