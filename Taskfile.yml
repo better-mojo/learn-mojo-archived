@@ -117,30 +117,40 @@ tasks:
 
   ##################################################################################################
 
-  q:
+  qq:
     cmds:
-      - task: quick
+      - task: pull
+      - task: q
+
+  q:
+    aliases: [quick]
+    cmds:
+      - task: cc
       - task: push
 
-  quick:
+  cc:
     cmds:
       - task: commit
       - task: commit
   #      - task: pull
   #      - task: push
 
-  commit:
+  c:
+    aliases: [commit]
     cmds:
+      - git status
       - git add .
       - git commit -m "update"
     ignore_error: true
 
   pull:
+    aliases: [pl]
     cmds:
       - git config pull.rebase false
       - git pull origin main
 
   push:
+    aliases: [ps]
     cmds:
       - git push origin main --tags
       - repo_url=`git remote -v | grep push | awk -F ":" '{print $2}' | awk -F ".git" '{print "https://github.com/"$1}'`; open $repo_url
