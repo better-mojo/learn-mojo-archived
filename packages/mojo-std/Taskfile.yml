@@ -39,7 +39,13 @@ tasks:
       - task: r4
       - task: r5
       - task: r6
+      - task: r10
     ignore_errors: true
+
+  r10:
+    aliases: [run10]
+    cmds:
+      - mojo {{ .SRC }}/try_10_path.mojo
 
   r6:
     aliases: [run6]
@@ -54,16 +60,14 @@ tasks:
   r4:
     aliases: [run4]
     cmds:
-      - mojo {{ .SRC }}/try_04_variables.mojo
+      - mojo {{ .SRC }}/try_04_benchmark.mojo
       - mojo {{ .SRC }}/try_04b.mojo
       - mojo {{ .SRC }}/try_04c.mojo
 
   r3:
     aliases: [run3]
     cmds:
-      - mojo {{ .SRC }}/try_03_fn.mojo
-      - mojo {{ .SRC }}/try_03b.mojo
-      - mojo {{ .SRC }}/try_03c.mojo
+      - mojo {{ .SRC }}/try_03_base64.mojo
 
   r2:
     aliases: [run2]
