@@ -1,0 +1,56 @@
+version: "3"
+
+vars:
+  VAR1: "some-var"
+  SRC: "src/mojo_cli"
+
+# global env:
+env:
+  ENV1: testing
+  SRC: "src/mojo_cli"
+
+################################################################################################
+
+tasks:
+  e:
+    cmds:
+      - modular host-info
+      - modular config-list
+      - modular --version
+      - mojo --version
+      - echo $MODULAR_HOME
+
+  r:
+    aliases: [run]
+    cmds:
+      - |
+        mojo {{ .SRC }}/try_01_algo.mojo
+
+  r1:
+    aliases: [run1]
+    cmds:
+      - echo {{ .SRC }}
+      - echo ${SRC}
+      - mojo {{ .SRC }}/main.mojo
+
+  br1:
+    aliases: [build:run1]
+    cmds:
+      - mkdir build/
+      - mojo build {{ .SRC }}/try_01.mojo -o build/main
+      - ./build/main
+    ignore_error: true
+
+  clean:
+    aliases: [c]
+    cmds:
+      - rm -rf build
+      - rm -rf dist
+      - mkdir build
+      - mkdir dist
+    ignore_error: true
+
+  help:
+    aliases: [h]
+    cmds:
+      - mojo build --help

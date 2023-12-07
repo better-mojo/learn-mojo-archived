@@ -24,6 +24,11 @@ includes:
     dir: packages/mojo-std/
     optional: true #
 
+  cli:
+    taskfile: packages/mojo-cli/
+    dir: packages/mojo-cli/
+    optional: true #
+
   ffi:
     aliases: [c, f]
     taskfile: packages/mojo-ffi/
