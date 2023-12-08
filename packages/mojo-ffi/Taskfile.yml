@@ -29,6 +29,12 @@ tasks:
       - |
         mojo {{ .SRC }}/try_01_algo.mojo
 
+  r2:
+    aliases: [run2]
+    cmds:
+      - |
+        mojo {{ .SRC }}/try_syscall.mojo
+
   r1:
     aliases: [run1]
     cmds:
@@ -59,6 +65,10 @@ tasks:
       - mojo build --help
 
   ################################################################################################
+
+  fix:
+    cmds:
+      - brew install llvm
 
   install:
     cmds:
