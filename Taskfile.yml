@@ -8,8 +8,8 @@ output: prefixed # = [interleaved, group, prefixed] # ref:
 includes:
   mojo:
     aliases: [m]
-    taskfile: packages/mojo101/
-    dir: packages/mojo101/
+    taskfile: packages/mojo-101/
+    dir: packages/mojo-101/
     optional: true #
 
   docs:

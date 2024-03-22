@@ -23,9 +23,9 @@ mojo 24.1.1 (0ab415f7) # 2024-03
 - ✅ 性能: C Level.(同 Rust/Zig/C)
 - ✅ 易用性: Python Level.(新增语法设计, 高度符合 Python 直觉)
 
-## [Mojo 101](./packages/mojo101/)
+## [Mojo 101](./packages/mojo-101/)
 
-- ✅️ [Mojo 入门学习教程](packages/mojo101)
+- ✅️ [Mojo 入门学习教程](packages/mojo-101)
 - ✅️ 包含大量示例代码
 - ✅️ 新手建议使用 `pycharm` 打开项目，方便使用 `jupyter notebook`
 
