@@ -46,18 +46,18 @@ fn fun_with_traits[T: SomeTrait](x: T):
 
 
 fn use_trait_function():
-    let thing = SomeStruct()
+    var thing = SomeStruct()
     fun_with_traits(thing)
 
     #
     # call 2:
     #
-    let thing2 = SomeStruct2()
+    var thing2 = SomeStruct2()
     fun_with_traits(thing2)
 
 
 fn use2():
-    let thing = SomeStruct()
+    var thing = SomeStruct()
     thing.required_method(42)
 
 

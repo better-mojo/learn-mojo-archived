@@ -14,13 +14,13 @@ fn pow(base: Int, exp: Int = 2) -> Int:
 
 # 按位置顺序传参, 顺序不可乱
 fn use_defaults():
-    let z = pow(3)  # 使用默认值
+    var z = pow(3)  # 使用默认值
     print(z)
 
 
 # k-v 方式传参
 fn use_keywords():
-    let z = pow(exp=3, base=2)  # k-v 枚举传参, 顺序可乱
+    var z = pow(exp=3, base=2)  # k-v 枚举传参, 顺序可乱
     print(z)
 
 

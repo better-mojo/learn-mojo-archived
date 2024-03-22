@@ -21,7 +21,7 @@ struct MyPair:
 
 
 fn use_mypair():
-    let mine = MyPair(2, 4)
+    var mine = MyPair(2, 4)
     mine.dump()
 
 

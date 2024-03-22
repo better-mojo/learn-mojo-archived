@@ -15,12 +15,12 @@ def greet(name):
 
 # python mode, 类似 Python + type hint
 def greet2(name: String) -> String:
-    let greeting = "Hello, " + name + "!"
+    var greeting = "Hello, " + name + "!"
     return greeting
 
 # mojo mode: 不可省略参数类型
 fn greet3(name: String) -> String:
-    let greeting = "Hello, " + name + "!"
+    var greeting = "Hello, " + name + "!"
     return greeting
 
 

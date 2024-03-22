@@ -88,18 +88,18 @@ fn fclose(stream: Pointer[FILE]) -> c_int:
 
 fn to_char_ptr(s: String) -> Pointer[c_char]:
     """Only ASCII-based strings."""
-    let ptr = Pointer[c_char]().alloc(len(s))
+    var ptr = Pointer[c_char]().alloc(len(s))
     for i in range(len(s)):
         ptr.store(i, ord(s[i]))
     return ptr
 
 
 fn __test_file__():
-    let fp = fopen(to_char_ptr("try_c.mojo"), to_char_ptr("r"))
+    var fp = fopen(to_char_ptr("try_c.mojo"), to_char_ptr("r"))
 
-    let buf_size = 1024
-    let buf = Pointer[UInt8]().alloc(buf_size)
-    let status = fread(buf.bitcast[c_void](), buf_size, 1, fp)
+    var buf_size = 1024
+    var buf = Pointer[UInt8]().alloc(buf_size)
+    var status = fread(buf.bitcast[c_void](), buf_size, 1, fp)
 
     print(String(buf.bitcast[Int8](), buf_size))
 

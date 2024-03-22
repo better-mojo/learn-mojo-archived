@@ -40,7 +40,7 @@ fn foo(x: Int):
 
 
 fn call_foo():
-    let string = "Hello"
+    var string = "Hello"
     # foo(string) # This call is ambiguous because two `foo` functions match it
     foo(MyString(string))
     foo(2)

@@ -18,7 +18,7 @@ fn mojo_mode():
     print("mojo mode vars:\n")
 
     var name = "Sam"  # Mutable
-    let user_id = 42  # Immutable
+    var user_id = 42  # Immutable
 
     print(name)
     name = "Bob"

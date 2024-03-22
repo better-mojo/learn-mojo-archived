@@ -6,7 +6,7 @@
 
 
 fn my_function(x: Int):
-    let z: Float32  # 定义 + 未初始化
+    var z: Float32  # 定义 + 未初始化
 
     if x != 0:
         z = 1.0

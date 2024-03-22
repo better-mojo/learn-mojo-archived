@@ -9,7 +9,7 @@ learn mojo
 
 ```ruby
 ❯ mojo -v
-mojo 0.6.0 (d55c0025) # 2023-12
+mojo 24.1.1 (0ab415f7) # 2024-03
 
 ```
 

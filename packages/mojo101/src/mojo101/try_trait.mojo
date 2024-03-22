@@ -6,5 +6,5 @@ struct MyPair:
 
 fn main():
     print("Hello, world!")
-    let p = MyPair(1, 2)
+    var p = MyPair(1, 2)
     print(p.first, p.second)

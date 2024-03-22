@@ -20,14 +20,14 @@ fn echo():
 # 需要等一段时间, 才能出结果
 fn report():
     print("benchmark result:")
-    let r = benchmark.run[sleeper](5)
+    var r = benchmark.run[sleeper](5)
     r.print()
     # print(r.mean())
 
 
 fn report2():
     print("benchmark result:")
-    let r = benchmark.run[echo](5)
+    var r = benchmark.run[echo](5)
     r.print()
     # print(r.mean())
 

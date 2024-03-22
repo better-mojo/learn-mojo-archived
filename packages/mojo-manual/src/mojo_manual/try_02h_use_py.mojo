@@ -25,9 +25,9 @@ def check_py(pkgs: Tuple):
 fn use_numpy() raises:
     _ = check_py(("numpy",))
 
-    let np = Python.import_module("numpy")
+    var np = Python.import_module("numpy")
 
-    let ar = np.arange(15).reshape(3, 5)
+    var ar = np.arange(15).reshape(3, 5)
     print(ar)
     print("shape:", ar.shape)
 

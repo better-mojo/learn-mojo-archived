@@ -9,7 +9,7 @@
 def comments():
     # This is a comment. The Mojo compiler ignores this line.
 
-    let message = "Hello, World!"  # This is also a valid comment
+    var message = "Hello, World!"  # This is also a valid comment
 
     """
     This is also a comment, but it's easier to write across
